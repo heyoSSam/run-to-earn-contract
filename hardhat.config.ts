@@ -5,8 +5,10 @@ require('dotenv').config();
 const config: HardhatUserConfig = {
   solidity: "0.8.27",
   networks: {
-    url: process.env.ALCHEMY_HOLESKY_URL,
-    accounts: [process.env.DEPLOYER_PRIVATE_KEY]
+    holesky: {
+      url: process.env.ALCHEMY_HOLESKY_URL,
+      accounts: [process.env.DEPLOYER_PRIVATE_KEY]
+    }
   }
 };
 
